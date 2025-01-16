@@ -16,11 +16,12 @@ python -m pip install --pre paddlepaddle-gpu -i https://www.paddlepaddle.org.cn/
 pip install .
 
 # test
-pytest tests/
+pytest -v ./tests
 
 ```
 
-# example code
+## example code
+
 ``` python
 import paddle
 from deepali.core import bspline as B
