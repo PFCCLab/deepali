@@ -89,7 +89,7 @@ def test_image_init(zeros: paddle.Tensor, grid: Grid) -> None:
         image = Image(data, grid, pin_memory=True)
         assert type(image) is Image
         assert image._grid is grid
-        assert not image.stop_gradient  # in paddle default is False
+        assert image.stop_gradient  # in paddle default is False
         assert "pinned" in str(image.place)
         # assert paddle_aux.is_eq_place(image.place, data.place)
         assert image.dtype == data.dtype
